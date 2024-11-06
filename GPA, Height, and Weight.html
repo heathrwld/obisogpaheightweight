@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Your Information</title>
+</head>
+<body>
+    <h1>Input Your Information</h1>
+    <label>GPA: <input type="number" id="gpa" step="0.01"></label><br>
+    <label>Height (cm): <input type="number" id="height" step="0.01"></label><br>
+    <label>Weight (kg): <input type="number" id="weight" step="0.01"></label><br>
+    <button onclick="showInfo()">Submit</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function showInfo() {
+            const gpa = document.getElementById('gpa').value;
+            const height = document.getElementById('height').value;
+            const weight = document.getElementById('weight').value;
+
+            document.getElementById('result').innerHTML = 
+                `GPA: ${gpa}<br>Height: ${height} cm<br>Weight: ${weight} kg`;
+        }
+    </script>
+</body>
+</html>
